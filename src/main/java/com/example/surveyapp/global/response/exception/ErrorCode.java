@@ -11,10 +11,14 @@ public enum ErrorCode {
     METHOD_NOT_ALLOWED(HttpStatus.METHOD_NOT_ALLOWED, "지원하는 HTTP 메서드가 아닙니다."),
     INVALID_TOKEN(HttpStatus.UNAUTHORIZED, "유효하지 않은 토큰입니다."),
     INVALID_REQUEST(HttpStatus.BAD_REQUEST, "요청 형식이 올바르지 않습니다."),
-    VALIDATION_ERROR(HttpStatus.BAD_REQUEST, "입력 값이 유효하지 않습니다.");
+    VALIDATION_ERROR(HttpStatus.BAD_REQUEST, "입력 값이 유효하지 않습니다."),
+
+    //상품 에러 정의
+    NOT_ADMIN_USER_ERROR(HttpStatus.UNAUTHORIZED,"관리자 계정만 상품을 생성할 수 있습니다." ),
+    NOT_FOUND_PRODUCT_ERROR(HttpStatus.UNAUTHORIZED,"생성할 상품이 없습니다." );
 
 
-    //ghldnjs
+
 
 
     private final HttpStatus status;
